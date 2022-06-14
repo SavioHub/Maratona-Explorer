@@ -13,11 +13,12 @@
         <h1>Vou revelar seu destino</h1>
         <p>Clique em fazer pergunta para que seu destino seja revelado.</p>
         
-        <input type="text" placeholder="Digite sua pergunta" />
-        <button>Fazer pergunta</button>
+        <input id="inputPergunta" type="text" placeholder="Digite sua pergunta" />
+
+        <button onclick="fazerPergunta()">Fazer pergunta</button>
 
         <h3 id="resposta">
-            <div>Pergunta que fiz</div>
+            <div id="perguntaFeita">Pergunta que fiz</div>
             Sim!
         </h3>
 

@@ -1,29 +1,9 @@
-// teste = true
-// const livro = {
-//     nome: "do mil ao milhao",
-//     id: 22
-// }
-
-// function testeFunction(id, nome){
-//     console.log("Testando essa bagaça")
-//     console.log('o id do meu livro = '+id,' e o nome dele = ' +nome)
-// }
-
-// if (teste == true)
-// {
-//     testeFunction(livro.id, livro.nome)
-// }
-
-// function soma(a,b){
-//     return a+b;
-// }
-
-// const multiplica = soma(20, 20) * 3;
-
-// console.log(multiplica);
-// console.log(soma(30,30)*2);
-
 //variaveis
+const elementoResposta = document.querySelector("#resposta");//faz a busca do elemento no arquivo HTML
+const inputPergunta = document.querySelector("#inputPergunta");//faz a busca do elemento no arquivo HTML
+const perguntaFeita = document.querySelector("#perguntaFeita");//faz a busca do elemento no arquivo HTML
+
+
 const respostas =[
     "Certeza!",
     "Não tenho tanta certeza.",
@@ -38,17 +18,40 @@ const respostas =[
     "A meu ver, sim.",
     "Minhas fontes dizem não.",
     "Provavelmente.",
- 
+    "Não é possível prever agora.",
+    "Perspectiva boa.",
+    "As perspectivas não são tão boas.",
+    "Sim.",
+    "Concentre-se e pergunte novamente.",
+    "Sinais apontam que sim.",
 ]
 
-//gerar numeros aleattorios
-const totalResposta = respostas.length; //total de resposta no array
-const numeroAleatorio = Math.floor(Math.random() * totalResposta)
-//Math.floor(Math.random()) é arendondamento por piso, sempre será zero
-//Math.floor(Math.random() * 19) o numero aleatório vai multiplicar por um valor, no caso o 19, com isso vai gerar um resultado inteiro
+//clicar em fazer pergunta
+function fazerPergunta(){
 
-console.log(numeroAleatorio)
+    if (inputPergunta.value == ""){
+        alert("Input vazio, preencha para fazer uma pergunta");
+    }else{
+        //gerar numeros aleatorios
+        const totalResposta = respostas.length; //total de resposta no array
+        const numeroAleatorio = Math.floor(Math.random() * totalResposta)
+        //Math.floor(Math.random()) é arendondamento por piso, sempre será zero
+        //Math.floor(Math.random() * 19) o numero aleatório vai multiplicar por um valor, no caso o 19, com isso vai gerar um resultado inteiro
+
+        // console.log(inputPergunta.value)
+        perguntaFeita.innerHTML = perguntaFeita
+
+        // console.log(respostas[numeroAleatorio])
+        elementoResposta.innerHTML = respostas[numeroAleatorio] //aparecerá a resposta na tela  
+        //ao invés de aparecer no console
+
+  
+    }
+
+
+}
+
 
 
 //dados de entrada
-//dados de saida
+//dados de saida    
