@@ -87,6 +87,8 @@ button:hover{
 #resposta{
     margin-top: 3rem;
     font-size: 1.6rem;
+
+    transition: opacity 1s;
 }
 #resposta div{
     font-size: 1.6rem;

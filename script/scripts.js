@@ -31,28 +31,29 @@ function fazerPergunta(){
 
     if (inputPergunta.value == ""){
         alert("Input vazio, preencha para fazer uma pergunta");
-        return 0;
+        return
     }
 
-const perguntaFeita = "<div>" + inputPergunta.value + "</div>"
+    const perguntaFeita = "<div>" + inputPergunta.value + "</div>"
 
-//gerar numeros aleatorios
-const totalResposta = respostas.length; //total de resposta no array
-const numeroAleatorio = Math.floor(Math.random() * totalResposta)
-//Math.floor(Math.random()) é arendondamento por piso, sempre será zero
-//Math.floor(Math.random() * 19) o numero aleatório vai multiplicar por um valor, no caso o 19, com isso vai gerar um resultado inteiro
+    //gerar numeros aleatorios
+    const totalResposta = respostas.length; //total de resposta no array
+    const numeroAleatorio = Math.floor(Math.random() * totalResposta)
+    //Math.floor(Math.random()) é arendondamento por piso, sempre será zero
+    //Math.floor(Math.random() * 19) o numero aleatório vai multiplicar por um valor, no caso o 19, com isso vai gerar um resultado inteiro
 
-console.log(inputPergunta.value)
-perguntaFeita.innerHTML = inputPergunta.value  
-
-// console.log(respostas[numeroAleatorio])
-elementoResposta.innerHTML = respostas[numeroAleatorio] 
-//vai fazer a busca de um indice aleatório na lista de resposta e 
-//aparecerá a resposta na tela  ao invés de aparecer no console
-
+    elementoResposta.innerHTML = perguntaFeita + respostas[numeroAleatorio] 
+    //vai mostrar a pergunta e 
+    //vai fazer a busca de um indice aleatório na lista de resposta e 
+    //aparecerá a resposta na tela  ao invés de aparecer no console
 }
 
+//sumir a resposta depois de alguns segundos
 
+setTimeout(function(){
+    elementoResposta.style.opacity =0;//add a opacidade
+    //alteração do estilo da página através do JS
+},7000)
 
 //dados de entrada
 //dados de saida    
