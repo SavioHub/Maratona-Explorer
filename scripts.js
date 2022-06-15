@@ -35,7 +35,6 @@ function fazerPergunta(){
     }
 
 const perguntaFeita = "<div>" + inputPergunta.value + "</div>"
-//  
 
 //gerar numeros aleatorios
 const totalResposta = respostas.length; //total de resposta no array
