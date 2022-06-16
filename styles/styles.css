@@ -18,12 +18,6 @@ body{
     font-family: sans-serif;
 }
 
-img{
-    margin-top: 10rem;
-    width: 15rem;
-    /* height: 2rem; */
-}
-
 #container{
     width: 80%; /*Unidade flexivel*/
     max-width: 40rem;
@@ -39,6 +33,12 @@ img{
     /* margin-inline: auto; */
     
     /* border: 2px solid red; */
+}
+
+#containerDado img{
+    margin-top: 10rem;
+    width: 15rem;
+    /* height: 2rem; */
 }
 
 h1{

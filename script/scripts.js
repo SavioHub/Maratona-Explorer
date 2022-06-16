@@ -2,7 +2,7 @@
 //faz a busca do elemento no arquivo HTML
 const elementoResposta = document.querySelector("#resposta");
 const inputPergunta = document.querySelector("#inputPergunta");
-
+const containerDado = document.querySelector("#containerDado");
 
 const respostas =[
     "Certeza!",
@@ -51,9 +51,6 @@ function fazerPergunta(){
 //sumir a resposta depois de alguns segundos
 
 setTimeout(function(){
-    elementoResposta.style.opacity =0;//add a opacidade
+    // elementoResposta.style.opacity =0;//add a opacidade
     //alteração do estilo da página através do JS
-},7000)
-
-//dados de entrada
-//dados de saida    
+},10000)
