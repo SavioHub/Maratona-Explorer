@@ -4,6 +4,12 @@
     /* reset da página */
     
 }
+:root{
+    --white:#fff;
+    --red: #FF0000;
+    --body:#4B0082;
+    --grey:#808080;
+}
 
 html{
     font-size: 62.5%; /*10px*/
@@ -11,34 +17,26 @@ html{
   /* 1 rem = 16px, 16px = 100% User agent */
 
 body{
-    background-color: rgb(59, 59, 135);
-    color: white;
+    background-color: var(--body);
+    color: var(--white);
 
     text-align: center;
     font-family: sans-serif;
-}
-
-img{
-    margin-top: 10rem;
-    width: 15rem;
-    /* height: 2rem; */
 }
 
 #container{
     width: 80%; /*Unidade flexivel*/
     max-width: 40rem;
 
-
     margin-right: auto;
     margin-left: auto;
     margin-top: auto;
     align-items: center;
+}
 
-    /* margin-bottom: 5rem; */
-    /*Ou*/
-    /* margin-inline: auto; */
-    
-    /* border: 2px solid red; */
+img{
+    margin-top: 10rem;
+    width: 15rem;
 }
 
 h1{
@@ -53,33 +51,44 @@ p{
     font-size: 1.6rem;
 }
 
-input, button{
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center; */
-    justify-items: center;
-    align-items: center;
-    width: 100%;    
-
-    padding: 2rem;
-    font-size: 2rem;
-    border-radius: 1.5rem;
-}
-
 input{
+    border: 2px solid var(--grey);
     margin-bottom: 2rem;
     opacity: 0.9;
-    /* border-radius: 1.5rem; */
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    width: 92%;
+    height: 5rem;
+    padding: 0% 3%;
 }
 
 button{
-    border: none;
+    border: 2px solid var(--grey);
     background-color: rgb(152, 89, 210);
-    color: white;
+    color: var(--white);
     transition: filter .7s;
-
+    border-radius: 1rem;
+    font-size: 2rem;
+    width: 100%;
+    height: 5rem;
+    color: var(--white);
 }
+
 button:hover{
     filter: brightness(1.2);
     cursor: pointer;
+}
+
+#resposta{
+    margin-top: 3rem;
+    font-size: 1.6rem;
+
+    transition: opacity 1s;
+}
+#resposta div{
+    font-size: 1.6rem;
+    font-weight: normal;
+    opacity: 0.9;
+
+    margin-bottom: 1rem;
 }
