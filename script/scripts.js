@@ -46,11 +46,12 @@ function fazerPergunta(){
     //vai mostrar a pergunta e 
     //vai fazer a busca de um indice aleatório na lista de resposta e 
     //aparecerá a resposta na tela  ao invés de aparecer no console
+    
+    elementoResposta.style.opacity = 1;
 }
 
 //sumir a resposta depois de alguns segundos
-
 setTimeout(function(){
-    // elementoResposta.style.opacity =0;//add a opacidade
+    elementoResposta.style.opacity =0;//add a opacidade
     //alteração do estilo da página através do JS
-},10000)
+},7000)
